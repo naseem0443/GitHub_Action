@@ -1,0 +1,21 @@
+name: my first workflow
+on: push
+
+jobs: 
+  print_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello
+        run: echo "Hello, World!"
+      - name: Print Current Date
+        run: date
+      - name: Print Current Directory
+        run: pwd
+      - name: create directory
+        run: mkdir nas
+      - name: create file
+        run: touch nas/file.txt
+      - name: write to file
+        run: echo "This is a sample file." > nas/file.txt
+      - name: read from file
+        run: cat nas/file.txt
