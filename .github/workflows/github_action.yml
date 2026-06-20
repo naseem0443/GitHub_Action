@@ -7,6 +7,9 @@ jobs:
     steps:
       - name: Print Hello
         run: echo "Hello, World!"
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        
       - name: Read the README file
         run: cat README.md
         
